@@ -27,26 +27,20 @@ public class A1Adept {
 			//System.out.println(costs[j]);
 			j++;
 		}
-		double maxCost = 0;
-		double minCost = 0;
+		double maxCost = costs[0];
+		double minCost = costs[0];
 		int maxIndex = 0;
 		int minIndex = 0;
-		for (int i = 0; i < costs.length - 1; i ++) {
-			if (costs[i + 1] > costs[i]) {
-				maxCost = costs[i + 1];
-				maxIndex = i + 1;
-			}
-			else {
+		for (int i = 1; i < costs.length; i ++) {
+			if (costs[i] > maxCost) {
 				maxCost = costs[i];
+				maxIndex = i;
 			}
 		}
-		for (int i = 0; i < costs.length - 1; i ++) {
-			if (costs[i + 1] < costs[i]) {
-				minCost = costs[i + 1];
-				minIndex = i + 1;
-			}
-			else {
+		for (int i = 1; i < costs.length; i ++) {
+			if (costs[i] < minCost) {
 				minCost = costs[i];
+				minIndex = i;
 			}
 		}
 		if (names.length == 1) {

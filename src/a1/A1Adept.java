@@ -24,7 +24,7 @@ public class A1Adept {
 			names[j] = customerName(j, scan);
 			//System.out.println(names[j]);
 			costs[j] = orderCost(j, itemList, itemPrices, scan);
-			//System.out.println(costs[j]);
+			System.out.println(costs[j]);
 			j++;
 		}
 		double maxCost = 0;
@@ -36,11 +36,17 @@ public class A1Adept {
 				maxCost = costs[i + 1];
 				maxIndex = i + 1;
 			}
+			else {
+				maxCost = costs[i];
+			}
 		}
 		for (int i = 0; i < costs.length - 1; i ++) {
 			if (costs[i + 1] < costs[i]) {
 				minCost = costs[i + 1];
 				minIndex = i + 1;
+			}
+			else {
+				minCost = costs[i];
 			}
 		}
 		if (names.length == 1) {

@@ -1,6 +1,5 @@
 package a1;
 
-//import java.util.Arrays;
 import java.util.Scanner;
 
 public class A1Jedi {
@@ -16,11 +15,11 @@ public class A1Jedi {
 			scan.nextDouble();
 			k ++;
 		}
-		//System.out.println(Arrays.toString(itemList));
+		
 		int numberOfCustomers = scan.nextInt();
-		//System.out.println(numberOfCustomers);
 		int[] customerCounts = new int[itemVarieties];
 		int[] itemCounts = new int[itemVarieties];
+		
 		for (k = 0; k < numberOfCustomers; k ++) {
 			scan.next();
 			scan.next();
@@ -45,11 +44,9 @@ public class A1Jedi {
 					}
 				}
 				uniqueItems[j] = itemName;
-
 			}
 		}
-		//System.out.println(Arrays.toString(customerCounts));
-		//System.out.println(Arrays.toString(itemCounts));
+
 		for (k = 0; k < itemVarieties; k ++) {
 			if (customerCounts[k] == 0) {
 				System.out.println("No customers bought " + itemList[k]);

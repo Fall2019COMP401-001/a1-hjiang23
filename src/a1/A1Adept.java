@@ -24,7 +24,7 @@ public class A1Adept {
 			names[j] = customerName(j, scan);
 			//System.out.println(names[j]);
 			costs[j] = orderCost(j, itemList, itemPrices, scan);
-			System.out.println(costs[j]);
+			//System.out.println(costs[j]);
 			j++;
 		}
 		double maxCost = 0;

@@ -31,7 +31,6 @@ public class A1Adept {
 		double minCost = 0;
 		int maxIndex = 0;
 		int minIndex = 0;
-		
 		for (int i = 0; i < costs.length - 1; i ++) {
 			if (costs[i + 1] > costs[i]) {
 				maxCost = costs[i + 1];
@@ -44,6 +43,14 @@ public class A1Adept {
 				minIndex = i + 1;
 			}
 		}
+		if (names.length == 1) {
+			maxCost = costs[0];
+			maxIndex = 0;
+		}
+		if (names.length == 1) {
+			minCost = costs[0];
+			minIndex = 0;
+		}
 		//System.out.println(maxCost);
 		//System.out.println(minCost);
 		double avgCost = 0;
@@ -51,7 +58,6 @@ public class A1Adept {
 			avgCost += costs[i];
 		}
 		avgCost = avgCost / numberOfCustomers;
-		//System.out.println(avgCost);
 		System.out.println("Biggest: " + names[maxIndex] + " (" + String.format("%.2f", maxCost) + ")");
 		System.out.println("Smallest: " + names[minIndex] + " (" + String.format("%.2f", minCost) + ")");
 		System.out.println("Average: " + String.format("%.2f", avgCost));

@@ -34,7 +34,7 @@ public class A1Novice {
 			System.out.println(output[k]);
 			k += 1;
 		}
-		
+		scan.close();
 	}
 	
 }
